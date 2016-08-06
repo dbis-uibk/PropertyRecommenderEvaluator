@@ -1,0 +1,29 @@
+.. PropertyRecommenderEvaluation documentation master file, created by
+   sphinx-quickstart on Sat Aug  6 18:16:48 2016.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to PropertyRecommenderEvaluation's documentation!
+=========================================================
+
+
+Welcome to the documentation pages of the PropertyRecommenderEvaluation project. Here you'll find the documentation of the Python (3.x) implementation of our framework. For further information about the project please visit our GitHub page at https://github.com/dbisibk/PropertyRecommenderEvaluator/.
+
+Our project consists of the following modules:
+
+.. toctree::
+   :maxdepth: 2
+
+   Evaluation
+   MySQLRecommender
+   ProgressBar
+   ResultAggregator
+   RuleEvaluation
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
