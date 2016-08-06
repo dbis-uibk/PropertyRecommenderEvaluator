@@ -1,6 +1,6 @@
 """ Main file for evaluation framework for property recommender systems. """
 import argparse
-import configparser
+#import configparser
 import json
 import os
 import pprint
@@ -13,7 +13,9 @@ from RuleEvaluation import RuleEvaluation
 
 """ MAIN FILE """
 def main():
-    """ read config files """
+    """ main file: reads all configuration and triggers whole evaluation and result
+    aggregation procedure
+    """
     configfiles = ['config.cfg', 'algorithms.cfg']
     config = configparser.ConfigParser()
     config.read(configfiles)
