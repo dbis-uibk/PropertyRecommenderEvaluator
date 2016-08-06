@@ -1,0 +1,7 @@
+RuleEvaluation module
+=====================
+
+.. automodule:: RuleEvaluation
+    :members:
+    :undoc-members:
+    :show-inheritance:

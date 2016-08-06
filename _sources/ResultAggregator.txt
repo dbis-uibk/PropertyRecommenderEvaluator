@@ -1,0 +1,7 @@
+ResultAggregator module
+=======================
+
+.. automodule:: ResultAggregator
+    :members:
+    :undoc-members:
+    :show-inheritance:

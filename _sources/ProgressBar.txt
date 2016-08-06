@@ -1,0 +1,7 @@
+ProgressBar module
+==================
+
+.. automodule:: ProgressBar
+    :members:
+    :undoc-members:
+    :show-inheritance:

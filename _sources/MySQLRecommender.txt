@@ -1,0 +1,7 @@
+MySQLRecommender module
+=======================
+
+.. automodule:: MySQLRecommender
+    :members:
+    :undoc-members:
+    :show-inheritance:
