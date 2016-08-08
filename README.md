@@ -7,7 +7,7 @@ The PropertyRecommenderEvaluator is a python framework for the evaluation of pro
 * import triple information extracted from a Wikidata JSON—dump to a MySQL database
 * computation of association rules (stored in MySQL)
 * creation and storage of a test set of random subjects (we store these for future comparisons of different algorithms and improved repeatability)
-* evaluation framework for comparing [recall, precision](https://en.wikipedia.org/wiki/Precision_and_recall)  and [reconstruction]().
+* evaluation framework for comparing [recall, precision](https://en.wikipedia.org/wiki/Precision_and_recall)  and [reconstruction](http://www.evazangerle.at/wp-content/papercite-data/pdf/recsys10.pdf).
 * detailed results exported to JSON including single results for every subject, evaluation run, recomendation algorithm and evaluation measure
 
 We have used this framework to evaluate . More details about this evaluation can be found in the [paper](http://www.evazangerle.at/wp-content/papercite-data/pdf/opensym16.pdf).
