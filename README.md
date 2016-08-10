@@ -28,6 +28,27 @@ address = {New York, NY, USA}
 ```
 ## Getting Started 
 
+### Prerequisites
+
+To install the Wikidata importer's PHP dependencies, you have to call *composer install*:
+
+```
+composer install -d ./tools/jsonDumpImporter
+```
+
+Next, you have to create all necessary tables and stored procedures for running the evaluation framework. For this, you have to call the *createSchema.sh* script with the connection settings to your database as arguments:
+
+```
+./tools/createSchema/createSchema.sh <host> <user> <password> <database>
+``` 
+
+Now you can start to import a [Wikidata JSON Dump](https://dumps.wikimedia.org/wikidatawiki/entities/). Our *import.sh* script handles bz2 and gzip compressed files.
+
+```
+./tools/jsonDumpImporter/import.sh <compressed dump file> <host> <user> <password> <database>
+``` 
+
+### Evaluation Framework
 
 You can find the documentation of the python evaluation part [here](http://dbisibk.github.io/PropertyRecommenderEvaluator/).
 
@@ -35,6 +56,8 @@ You can find the documentation of the python evaluation part [here](http://dbisi
 ## Requirements
 * Python 3.x
 * MySQL or MariaDB
+* PHP >= 5.4.0
+* Composer >= 1.2
 
 ## Contact
 Eva Zangerle, Martin Pichl, Wolfgang Gassler  
