@@ -13,7 +13,7 @@ The PropertyRecommenderEvaluator is a python framework for the evaluation of pro
 We have used this framework to evaluate . More details about this evaluation can be found in the [paper](http://www.evazangerle.at/wp-content/papercite-data/pdf/opensym16.pdf).
 
 # Citation and License
-We release the code under the [GNU LGPL License](https://github.com/dbisibk/PropertyRecommenderEvaluator/blob/master/LICENSE.md). If you use our code in a scientific context, please cite the following paper:
+We release the code under the [GNU LGPL License](https://github.com/dbis-uibk/PropertyRecommenderEvaluator/blob/master/LICENSE.md). If you use our code in a scientific context, please cite the following paper:
 ```
 @inProceedings{opensym16,
 author = {Zangerle, Eva and Gassler, Wolfgang and Pichl, Martin and Steinhauser, Stefan and Specht, G\"{u}nther},
@@ -50,7 +50,7 @@ Now you can start to import a [Wikidata JSON Dump](https://dumps.wikimedia.org/w
 
 ### Evaluation Framework
 
-You can find the documentation of the python evaluation part [here](http://dbisibk.github.io/PropertyRecommenderEvaluator/).
+You can find the documentation of the python evaluation part [here](http://dbis-uibk.github.io/PropertyRecommenderEvaluator/).
 
 
 ## Requirements
