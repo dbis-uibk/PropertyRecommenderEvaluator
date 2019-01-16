@@ -6,12 +6,11 @@ CREATE TABLE IF NOT EXISTS `dict_sub` (
   `sub_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `sub_text` varchar(700) NOT NULL,
   `sub_count` int(10) unsigned NOT NULL DEFAULT '1',
+  `sub_exclude` tinyint(1) NOT NULL DEFAULT '0',
   PRIMARY KEY (`sub_id`),
-  UNIQUE KEY `sub_text.unq` (`sub_text`)
+  UNIQUE KEY `sub_text.unq` (`sub_text`),
+  INDEX `exclude.idx` (`sub_exclude`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
-ALTER TABLE `dict_sub` ADD COLUMN `sub_exclude` TINYINT(1) DEFAULT '0';
-CREATE INDEX `exclude.idx` ON `dict_sub`(sub_exclude);
 
 DROP TABLE IF EXISTS `dict_prop`;
 CREATE TABLE IF NOT EXISTS `dict_prop` (
@@ -44,13 +43,13 @@ CREATE TABLE IF NOT EXISTS `dict_type` (
 DROP TABLE IF EXISTS `dict_obj`;
 CREATE TABLE IF NOT EXISTS `dict_obj` (
   `obj_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `obj_text` varchar(10000) NOT NULL,
+  `obj_text` varchar(10000) CHARACTER SET utf8mb4 NOT NULL,
   `obj_count` int(10) unsigned NOT NULL DEFAULT '1',
   `type_id` smallint(5) unsigned NULL,
   `lang_id` smallint(5) unsigned NULL,
   PRIMARY KEY (`obj_id`),
   UNIQUE KEY `obj_text.unq` (obj_text(191),`type_id`,`lang_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- triple table
 
@@ -60,7 +59,7 @@ CREATE TABLE IF NOT EXISTS `triple` (
   `prop_id` int(10) unsigned NOT NULL,
   `obj_id` int(10) unsigned NOT NULL,
   PRIMARY KEY (`sub_id`,`prop_id`,`obj_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- rule table
 
@@ -126,5 +125,5 @@ CREATE TABLE IF NOT EXISTS `triple_reconstruct` (
   `obj_id` int(10) unsigned NOT NULL,
   `idx` mediumint(8) unsigned NOT NULL,
   PRIMARY KEY (`sub_id`,`prop_id`,`obj_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
