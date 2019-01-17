@@ -15,10 +15,10 @@ else
 	echo "Importing into database!";
 	command -v pv > /dev/null && { 
 		# pv command exists
-		pv ${1}.sql | mysql -h $2 -u $3 -p${4} $5;
+		pv ${1}.sql | mysql -h $2 -u $3 -p${4} --default-character-set=utf8mb4 $5;
  	} || {
 		# pv command doesn't exist
-		mysql -h $2 -u $3 -p${4} $5 < ${1}.sql;
+		mysql -h $2 -u $3 -p${4} --default-character-set=utf8mb4 $5 < ${1}.sql;
   }
 	echo "Import finished!";
 fi
